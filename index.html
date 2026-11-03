@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tích Cơ - Dán lên những câu chuyện thật đẹp | Stickers Việt Nam</title>
+  <meta name="description" content="Những chiếc sticker mang hơi thở Việt Nam, để bạn lưu giữ khoảnh khắc, trang trí và kể câu chuyện của riêng mình. Dự án bởi nhóm sinh viên Graphic Design.">
+
+  <!-- Google Fonts: Playfair Display & Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER & NAVIGATION BAR
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <!-- Logo -->
+      <a href="#hero" class="brand-logo" title="Tích Cơ - Stickers Việt Nam">
+        <img src="assets/images/logo_tich_co.png" alt="Tích Cơ Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Menu Điều Hướng Chính -->
+      <nav class="main-nav" id="mainNav">
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="#bo-suu-tap" class="nav-link">Bộ Sưu Tập</a>
+        <a href="#ve-chung-toi" class="nav-link">Về Chúng Tôi</a>
+        <a href="#lien-he" class="nav-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Các Icon Tiện Ích (Tìm kiếm, Tài khoản, Giỏ hàng) -->
+      <div class="header-actions">
+        <!-- Nút Tìm Kiếm -->
+        <button class="action-btn" title="Tìm kiếm sticker" onclick="toggleSearchModal(true)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Nút Tài Khoản -->
+        <button class="action-btn" title="Tài khoản cá nhân" onclick="showToast('Tính năng thành viên Tích Cơ sắp ra mắt!')">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+
+        <!-- Nút Giỏ Hàng -->
+        <button class="action-btn cart-btn" title="Xem giỏ hàng" onclick="toggleCartDrawer(true)">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <!-- Nút Toggle Mobile Menu -->
+        <div class="mobile-toggle" id="mobileToggle" title="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       HERO SECTION (BANNER CHÍNH)
+       ====================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <!-- Cột Nội Dung Bên Trái -->
+      <div class="hero-content">
+        <span class="hero-subtitle-tag">STICKERS • VIỆT NAM • NHỮNG CÂU CHUYỆN NHỎ</span>
+        <h1 class="hero-title">
+          Dán lên<br>
+          những câu chuyện<br>
+          <span class="highlight-rose">thật đẹp</span>
+        </h1>
+        <p class="hero-description">
+          Những chiếc sticker mang hơi thở Việt Nam, để bạn lưu giữ khoảnh khắc, trang trí và kể câu chuyện của riêng mình.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#bo-suu-tap" class="btn-pill-primary">
+            Khám phá bộ sưu tập <span class="arrow-icon">➔</span>
+          </a>
+          <a href="#shop" class="btn-pill-outline">
+            Xem Shop Ngay
+          </a>
+        </div>
+      </div>
+
+      <!-- Cột Hình Ảnh Sổ Ký Ức Bên Phải -->
+      <div class="hero-visual">
+        <div class="notebook-wrapper">
+          <img src="assets/images/hero_journal.jpg" alt="Sổ tay lưu niệm dán sticker Tích Cơ" class="notebook-image">
+          <!-- Floating Badge Trang Trí -->
+          <div class="floating-badge floating-badge-1">
+            <span>🌸</span> Tích Cơ kiến tạo khung cảnh - kết nối văn hóa
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECTION: BỘ SƯU TẬP STICKER VIỆT NAM
+       ====================================================================== -->
+  <section class="collections-section" id="bo-suu-tap">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Bộ sưu tập Sticker Việt Nam</h2>
+        <p class="section-desc">
+          Khám phá những bộ sticker được lấy cảm hứng từ văn hóa, thiên nhiên, đời sống Việt Nam. Mỗi bộ sưu tập là một câu chuyện nhỏ, mang đến những thiết kế gần gũi và giàu cảm xúc.
+        </p>
+      </div>
+
+      <!-- Lưới 3 Bộ Sưu Tập -->
+      <div class="collections-grid">
+        <!-- 1. Ông Năm Chèo -->
+        <div class="collection-card" onclick="selectAndScrollCollection('vn-que-huong')">
+          <div class="collection-image-wrapper">
+            <img src="assets/images/card_vn_quehuong.jpg" alt="Ông Năm Chèo">
+          </div>
+          <div class="collection-meta">
+            <div class="collection-header">
+              <h3 class="collection-title">Ông Năm Chèo</h3>
+              <div class="collection-arrow-btn">&rarr;</div>
+            </div>
+            <p class="collection-desc">Huyền tích sông nước qua nét vẽ sticker.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECTION: SHOP & CHI TIẾT BỘ SƯU TẬP
+       ====================================================================== -->
+  <section class="shop-section" id="shop">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <div class="shop-breadcrumb">
+        <span class="breadcrumb-shop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">SHOP</span>
+        <span>&gt;</span>
+        <span class="breadcrumb-current" id="currentBreadcrumb">ÔNG NĂM CHÈO</span>
+      </div>
+
+      <!-- Khung Showcase Chi Tiết (Spotlight Card) -->
+      <div class="featured-showcase-card">
+        <!-- Cột Ảnh & Thumbnails -->
+        <div class="showcase-gallery">
+          <div class="showcase-main-image-box">
+            <img src="assets/images/shop_featured_vnqh.jpg" alt="Ông Năm Chèo" id="featuredMainImg">
+          </div>
+          <div class="showcase-thumbs">
+            <div class="thumb-item active" title="Toàn tấm sticker" onclick="switchFeaturedThumb(this, 'assets/images/shop_featured_vnqh.jpg')">
+              <img src="assets/images/thumb_1.jpg" alt="Toàn tấm sticker">
+            </div>
+            <div class="thumb-item" title="Tranh minh họa Ông Năm Chèo" onclick="switchFeaturedThumb(this, 'assets/images/thumb_2.jpg')">
+              <img src="assets/images/thumb_2.jpg" alt="Tranh minh họa Ông Năm Chèo">
+            </div>
+            <div class="thumb-item" title="Tấm nền dán sticker & Mã QR" onclick="switchFeaturedThumb(this, 'assets/images/thumb_3.jpg')">
+              <img src="assets/images/thumb_3.jpg" alt="Tấm nền Sự Tích Ông Năm Chèo">
+            </div>
+            <div class="thumb-item" title="Phiếu kể chuyện Sự Tích Ông Năm Chèo" onclick="switchFeaturedThumb(this, 'assets/images/thumb_4.jpg')">
+              <img src="assets/images/thumb_4.jpg" alt="Phiếu kể chuyện Sự Tích Ông Năm Chèo">
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột Thông Tin Sản Phẩm -->
+        <div class="showcase-info">
+          <h3 class="showcase-title" id="featuredTitle">Ông Năm Chèo</h3>
+          <p class="showcase-desc" id="featuredDesc">
+            Bộ sưu tập lấy cảm hứng từ truyền tích dân gian Ông Năm Chèo, tái hiện sinh động hình tượng cá sấu khổng lồ, những đợt sóng cuộn trào cùng các nhân vật bơi lội và nhà sàn ven sông.
+          </p>
+
+          <!-- Huy hiệu đặc điểm -->
+          <div class="specs-badge-list">
+            <span class="spec-badge">💧 Decal Vinyl Chống Nước</span>
+            <span class="spec-badge">✨ Cán Màng Mờ Bảo Vệ</span>
+            <span class="spec-badge">📐 Khổ A6 (10.5x14.8cm)</span>
+            <span class="spec-badge">✂️ Bế Demi Từng Hình</span>
+          </div>
+
+          <!-- Giá bán -->
+          <div class="price-row">
+            <span class="price-current" id="featuredPrice">39.000đ</span>
+            <span class="price-old" id="featuredOldPrice">50.000đ</span>
+          
+            <span class="price-discount">-35% ƯU ĐÃI</span>
+          </div>
+
+          <!-- Bộ Chọn Số Lượng & Nút Hành Động -->
+          <div class="showcase-actions">
+            <div class="qty-picker">
+              <button class="qty-btn" id="qtyMinus" type="button">−</button>
+              <input type="number" class="qty-input" id="showcaseQty" value="1" min="1" max="99" readonly>
+              <button class="qty-btn" id="qtyPlus" type="button">+</button>
+            </div>
+
+            <button class="btn-pill-primary" id="addShowcaseToCartBtn" type="button">
+              Thêm Vào Giỏ Hàng
+            </button>
+
+            <button class="btn-pill-outline" type="button" onclick="openProductModal(currentCollectionId)">
+              Xem Chi Tiết ➔
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dòng "CÁC BỘ SƯU TẬP KHÁC" -->
+      <div class="related-collections-header">CÁC BỘ SƯU TẬP KHÁC</div>
+      <div class="related-collections-row" id="relatedCollectionsRow">
+        <!-- Được tạo tự động bởi JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECTION: VỀ CHÚNG TÔI (ABOUT US)
+       ====================================================================== -->
+  <section class="about-section" id="ve-chung-toi">
+    <div class="container">
+      <div class="about-header">
+        <span class="about-tag">VỀ CHÚNG TÔI</span>
+        <h2 class="about-title">Chúng tôi là <span>Tích Cơ</span></h2>
+        <p class="about-story">
+          Tích Cơ là một dự án được thực hiện bởi nhóm những sinh viên ngành Graphic Design, với tình yêu dành cho văn hóa Việt Nam. Chúng tôi mong muốn mang những câu chuyện, hình ảnh và nét đẹp đời sống Việt vào từng chiếc sticker, để mỗi sản phẩm không chỉ là một món đồ trang trí mà còn là một phần của ký ức và cảm xúc.
+        </p>
+      </div>
+
+      <!-- 3 Giá Trị Cốt Lõi (Sáng tạo - Văn hóa - Kết nối) -->
+      <div class="values-grid">
+        <!-- 1. Sáng Tạo -->
+        <div class="value-card">
+          <div class="value-icon-box">
+            <!-- Palette Icon -->
+            <svg viewBox="0 0 24 24">
+              <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+              <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+              <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+              <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+              <path d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.21-.64-1.67-.42-.45-.66-1.04-.66-1.66 0-1.38 1.12-2.5 2.5-2.5H17c2.76 0 5-2.24 5-5 0-4.96-4.48-8.67-10-8.67z"></path>
+            </svg>
+          </div>
+          <h3 class="value-title">Sáng tạo</h3>
+          <p class="value-desc">Kết hợp giữa thiết kế hiện đại và giá trị truyền thống.</p>
+        </div>
+
+        <!-- 2. Văn Hóa -->
+        <div class="value-card">
+          <div class="value-icon-box">
+            <!-- Lotus Icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3c-1.5 3-4 6-4 9 0 3 2.5 5 4 5s4-2 4-5c0-3-2.5-6-4-9z"></path>
+              <path d="M12 17c-2 0-5.5-.5-8-3 0 4 3 7 8 7s8-3 8-7c-2.5 2.5-6 3-8 3z"></path>
+              <path d="M7 11C5 12 3 14 3 16c2 1 5 1 7-1"></path>
+              <path d="M17 11c2 1 4 3 4 5-2 1-5 1-7-1"></path>
+            </svg>
+          </div>
+          <h3 class="value-title">Văn hóa</h3>
+          <p class="value-desc">Lấy cảm hứng từ những nét đẹp đặc trưng của Việt Nam.</p>
+        </div>
+
+        <!-- 3. Kết Nối -->
+        <div class="value-card">
+          <div class="value-icon-box">
+            <!-- Heart Icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 class="value-title">Kết nối</h3>
+          <p class="value-desc">Mang những câu chuyện Việt đến gần hơn với mọi người.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bức Họa Non Nước Thủy Mặc Ở Chân Phần Về Chúng Tôi -->
+    <div class="about-landscape-wrapper">
+      <img src="assets/images/about_water_landscape.jpg" alt="Tranh non nước Việt Nam" class="about-landscape-img">
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SECTION: LIÊN HỆ (CONTACT US)
+       ====================================================================== -->
+  <section class="contact-section" id="lien-he">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Cột Nội Dung & Form Liên Hệ -->
+        <div class="contact-info-col">
+          <span class="contact-tag">LIÊN HỆ</span>
+          <h2 class="contact-title">Kết nối cùng <span>Tích Cơ</span></h2>
+          <p class="contact-subtitle">
+            Nếu bạn có bất kỳ câu hỏi, ý tưởng hợp tác hoặc góp ý, đừng ngần ngại liên hệ với chúng tôi. Chúng tôi luôn sẵn sàng lắng nghe!
+          </p>
+
+          <!-- Danh sách thông tin liên lạc trực tiếp -->
+          <div class="direct-contact-list">
+            <!-- Số Điện Thoại -->
+            <div class="direct-contact-item" onclick="copyToClipboard('0939443299', 'Số điện thoại')" title="Bấm để sao chép hoặc gọi điện">
+              <div class="contact-icon-circle">
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <a href="tel:0939443299" style="font-weight:700; letter-spacing:0.5px;">0939443299</a>
+            </div>
+
+            <!-- Email -->
+            <div class="direct-contact-item" onclick="copyToClipboard('EXE101.G7@gmail.com', 'Địa chỉ email')" title="Bấm để gửi email">
+              <div class="contact-icon-circle">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <a href="mailto:EXE101.G7@gmail.com" style="font-weight:600;">EXE101.G7@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- Form Điền Tin Nhắn -->
+          <form class="contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="contactName" class="form-input" placeholder="Họ và tên" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="contactEmail" class="form-input" placeholder="Email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea id="contactMessage" class="form-textarea" placeholder="Nội dung tin nhắn" rows="3" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn-pill-primary">
+                GỬI TIN NHẮN ➔
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Cột Tranh Chùa Cổ & Hoa Sen Bên Phải -->
+        <div class="contact-art-col">
+          <img src="assets/images/contact_temple_art.jpg" alt="Tranh Chùa Cổ và Hoa Sen" class="contact-art-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Cột Thương Hiệu -->
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo-footer">
+            <img src="assets/images/logo_tich_co.png" alt="Tích Cơ Logo" style="height:72px; width:auto; filter:brightness(0) invert(1);">
+          </a>
+          <p class="footer-tagline">
+            Dán lên những câu chuyện thật đẹp. Sản phẩm sticker nghệ thuật tôn vinh vẻ đẹp quê hương và tâm hồn người Việt.
+          </p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" class="social-icon-btn" title="Facebook">FB</a>
+            <a href="https://instagram.com" target="_blank" class="social-icon-btn" title="Instagram">IG</a>
+            <a href="https://tiktok.com" target="_blank" class="social-icon-btn" title="TikTok">TT</a>
+            <a href="https://shopee.vn" target="_blank" class="social-icon-btn" title="Shopee">SP</a>
+          </div>
+        </div>
+
+        <!-- Cột Danh Mục -->
+        <div>
+          <h4 class="footer-title">Khám Phá</h4>
+          <ul class="footer-links">
+            <li><a href="#bo-suu-tap">Ông Năm Chèo</a></li>
+            <li><a href="#bo-suu-tap">Ẩm Thực Việt Nam</a></li>
+            <li><a href="#bo-suu-tap">Văn Hóa Truyền Thống</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột Hỗ Trợ -->
+        <div>
+          <h4 class="footer-title">Hỗ Trợ</h4>
+          <ul class="footer-links">
+            <li><a href="#ve-chung-toi">Về chúng tôi</a></li>
+            <li><a href="#lien-he">Chính sách giao hàng</a></li>
+            <li><a href="#lien-he">Bảo hành 1 đổi 1</a></li>
+            <li><a href="#lien-he">Hướng dẫn mua hàng</a></li>
+            <li><a href="#lien-he">Hợp tác đại lý & CTV</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột Liên Hệ Nhanh -->
+        <div>
+          <h4 class="footer-title">Liên Hệ</h4>
+          <p style="font-size:14px; color:#A3C5BA; line-height:1.7; margin-bottom:12px;">
+            Dự án sinh viên Graphic Design<br>
+            Hotline: <strong style="color:#FFF;">0939443299</strong><br>
+            Email: <strong style="color:#FFF;">EXE101.G7@gmail.com</strong>
+          </p>
+          <span style="display:inline-block; font-size:12px; background:rgba(255,255,255,0.08); padding:6px 12px; border-radius:12px; color:#72D8BE;">
+            ✓ Giao hàng toàn quốc
+          </span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Tích Cơ - Stickers Việt Nam. Tất cả quyền được bảo lưu.</div>
+        <div>Thiết kế với tất cả tình yêu dành cho văn hóa Việt Nam.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       MODAL OVERLAY (LỚP MỜ NỀN CHUNG)
+       ====================================================================== -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+
+  <!-- ======================================================================
+       GIỎ HÀNG (CART DRAWER TRƯỢT TỪ BÊN PHẢI)
+       ====================================================================== -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <div class="drawer-title">Giỏ Hàng <span id="cartCountHeader">(0)</span></div>
+      <div class="drawer-close" onclick="toggleCartDrawer(false)">&times;</div>
+    </div>
+    <div class="drawer-body" id="cartDrawerBody">
+      <!-- Nội dung sản phẩm được nạp động từ js -->
+    </div>
+    <div class="drawer-footer">
+      <div class="subtotal-row">
+        <span>Tổng tiền tạm tính:</span>
+        <span class="subtotal-amount" id="cartSubtotal">0đ</span>
+      </div>
+      <button class="checkout-btn" onclick="openCheckoutModal()">
+        Tiến hành đặt hàng ➔
+      </button>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL CHI TIẾT SẢN PHẨM (QUICK VIEW MODAL)
+       ====================================================================== -->
+  <div class="custom-modal" id="productModal">
+    <div class="modal-close-btn" onclick="closeModals()">&times;</div>
+    <div id="productModalContent">
+      <!-- Nạp động qua JavaScript -->
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL TÌM KIẾM (SEARCH MODAL)
+       ====================================================================== -->
+  <div class="search-modal" id="searchModal">
+    <div class="modal-close-btn" onclick="closeModals()">&times;</div>
+    <h3 style="font-family:var(--font-serif); font-size:22px; color:var(--primary-green); margin-bottom:16px;">
+      Tìm kiếm bộ sticker
+    </h3>
+    <div class="search-input-box">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6E6862" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Nhập tên sticker, địa danh, món ăn..." oninput="handleSearch(this.value)">
+    </div>
+    <div class="search-results-list" id="searchResultsList">
+      <!-- Nạp động qua JS -->
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL ĐẶT HÀNG & THANH TOÁN (CHECKOUT MODAL)
+       ====================================================================== -->
+  <div class="custom-modal" id="orderModal">
+    <div class="modal-close-btn" onclick="closeModals()">&times;</div>
+    <div id="orderModalContent">
+      <span class="section-tag">HOÀN TẤT ĐƠN HÀNG</span>
+      <h3 style="font-family:var(--font-serif); font-size:28px; color:var(--primary-green); margin-bottom:16px;">
+        Thông Tin Giao Hàng
+      </h3>
+
+      <!-- Bảng tóm tắt đơn hàng -->
+      <div style="background:#FAF6EF; border-radius:12px; padding:16px; margin-bottom:24px;">
+        <div style="font-weight:700; color:var(--primary-green); margin-bottom:8px; font-size:14px;">Đơn hàng của bạn:</div>
+        <div id="orderSummaryList"></div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px; padding-top:10px; border-top:1.5px solid #D8CFC2; font-size:16px;">
+          <strong>Tổng thanh toán:</strong>
+          <strong style="color:var(--primary-pink); font-size:20px;" id="orderModalTotal">0đ</strong>
+        </div>
+      </div>
+
+      <!-- Form nhập địa chỉ -->
+      <form onsubmit="handleOrderSubmit(event)">
+        <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:20px;">
+          <div>
+            <label style="display:block; font-size:13px; font-weight:600; margin-bottom:4px;">Họ và tên người nhận *</label>
+            <input type="text" id="orderName" class="form-input" placeholder="Ví dụ: Nguyễn Văn An" required>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div>
+              <label style="display:block; font-size:13px; font-weight:600; margin-bottom:4px;">Số điện thoại *</label>
+              <input type="tel" id="orderPhone" class="form-input" placeholder="Ví dụ: 0912345678" required>
+            </div>
+            <div>
+              <label style="display:block; font-size:13px; font-weight:600; margin-bottom:4px;">Email (để nhận mã đơn)</label>
+              <input type="email" id="orderEmail" class="form-input" placeholder="Ví dụ: an@gmail.com">
+            </div>
+          </div>
+          <div>
+            <label style="display:block; font-size:13px; font-weight:600; margin-bottom:4px;">Địa chỉ nhận hàng chi tiết *</label>
+            <input type="text" id="orderAddress" class="form-input" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành" required>
+          </div>
+          <div>
+            <label style="display:block; font-size:13px; font-weight:600; margin-bottom:8px;">Phương thức thanh toán:</label>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <label style="display:flex; align-items:center; gap:8px; font-size:14px; cursor:pointer;">
+                <input type="radio" name="paymentMethod" value="cod" checked>
+                Thanh toán khi nhận hàng (COD)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:14px; cursor:pointer;">
+                <input type="radio" name="paymentMethod" value="bank">
+                Chuyển khoản ngân hàng (Quét mã VietQR)
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="checkout-btn">
+          Xác Nhận Đặt Hàng ➔
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       TOAST CONTAINER (THÔNG BÁO NỔI)
+       ====================================================================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
